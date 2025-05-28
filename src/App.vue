@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import AsideBlock  from '@/components/AsideBlock.vue'
+import asideBlock  from '@/components/asideBlock.vue'
 </script>
 
 <template>
   <div id="layout">
-    <AsideBlock  />
+    <asideBlock  />
     <RouterView />
   </div>
 </template>

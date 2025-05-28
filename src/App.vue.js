@@ -1,5 +1,5 @@
 import { RouterView } from 'vue-router';
-import AsideBlock from '@/components/AsideBlock.vue';
+import AsideBlock from '@/components/asideBlock.vue';
 debugger; /* PartiallyEnd: #3632/scriptSetup.vue */
 const __VLS_ctx = {};
 let __VLS_components;
