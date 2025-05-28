@@ -1,6 +1,6 @@
 <script>
 import { ref, onMounted, onUnmounted } from 'vue'
-import { useCourses } from '@/stores/courses'
+import { useCourses } from "@/stores/courses"
 
 export default {
   data() {
