@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  font-family: "Inter";
+}
+
+body {
+  background-color: #f9faf5;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.link {
+  font-weight: 500;
+  font-size: 18px;
+  color: black;
+}
+
+aside {
+  max-width: 400px;
+  width: 400px;
+  padding: 20px;
+  padding-right: 0;
+  height: 100vh;
+}
+aside .positions {
+  border-right: 1px solid #cccccc;
+  display: flex;
+  padding-right: 20px;
+  gap: 50px;
+  height: 100%;
+  flex-direction: column;
+}
+aside .positions .title {
+  height: 75px;
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-family: "Roboto";
+  font-size: 30px;
+}
+aside .positions nav {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+aside .positions nav a {
+  padding: 20px 15px;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+aside .positions nav a.active {
+  background-color: #eeecdc;
+}
+
+.headTitle {
+  font-weight: 500;
+  font-size: 24px;
+  padding: 20px;
+  border-bottom: 1px solid #cccccc;
+  width: 100%;
+}
+
+#AboutView {
+  width: calc(100% - 400px);
+  margin-top: 20px;
+}
+#AboutView .info {
+  padding: 20px;
+  max-height: calc(100vh - 110px);
+  overflow: auto;
+}
+#AboutView .info .profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+#AboutView .info .profile .img img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+#AboutView .info .profile .contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#AboutView .info .profile .contactInfo .fio {
+  font-weight: 500;
+  font-size: 30px;
+}
+#AboutView .info .profile .contactInfo .age,
+#AboutView .info .profile .contactInfo .location {
+  font-weight: 400;
+  font-size: 20px;
+}
+#AboutView .info .resume section {
+  margin-bottom: 30px;
+}
+#AboutView .info .resume h1,
+#AboutView .info .resume h2 {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+#AboutView .info .resume ul {
+  padding-left: 20px;
+}
+#AboutView .info .resume ul li {
+  margin-bottom: 5px;
+}
+#AboutView .info .resume .intro {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+#AboutView .info .resume .intro .text {
+  max-width: 900px;
+}
+#AboutView .info .resume .skills ul,
+#AboutView .info .resume .experience ul,
+#AboutView .info .resume .education ul {
+  list-style: disc;
+}
+#AboutView .info .resume .hobbies p {
+  max-width: 900px;
+}
+
+#HomeView {
+  width: calc(100% - 400px);
+  margin-top: 20px;
+}
+#HomeView .headTitle {
+  font-weight: 500;
+  font-size: 24px;
+  padding: 20px;
+  border-bottom: 1px solid #cccccc;
+  width: 100%;
+}
+#HomeView .categories {
+  padding: 20px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  border-bottom: 1px solid #cccccc;
+}
+#HomeView .categories .name {
+  font-size: 24px;
+  font-weight: 500;
+}
+#HomeView .categories ul {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  list-style: none;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+#HomeView .categories ul::-webkit-scrollbar {
+  height: 6px;
+}
+#HomeView .categories ul li {
+  background-color: #ededed;
+  border-radius: 50px;
+  padding: 8px 12px;
+  font-size: 16px;
+}
+#HomeView .categories ul li:hover {
+  cursor: pointer;
+}
+#HomeView .wrapper {
+  max-width: 100%;
+}
+#HomeView .wrapper .loader-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+#HomeView .wrapper .custom-loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #ccc;
+  border-top-color: #eeecdc;
+  border-radius: 50%;
+  animation: spin 1s ease-in-out infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+#HomeView .carousel {
+  cursor: grab;
+  padding: 20px;
+  display: flex;
+  max-width: 100%;
+  overflow-x: auto;
+  width: fit-content;
+  gap: 15px;
+}
+#HomeView .carousel.dragging {
+  cursor: grabbing;
+}
+#HomeView .carousel::-webkit-scrollbar {
+  height: 0;
+}
+#HomeView .carousel .item {
+  min-width: 350px;
+  flex-shrink: 0;
+}
+#HomeView .carousel .item a,
+#HomeView .carousel .item p,
+#HomeView .carousel .item div,
+#HomeView .carousel .item span {
+  user-select: none;
+}
+#HomeView .carousel .item .titleCourse {
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  color: #606060;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+#HomeView .carousel .item .titleCourse span {
+  padding: 4px 7px;
+  border-radius: 50px;
+  font-size: 12px;
+  color: white;
+}
+#HomeView .carousel .item .block {
+  border-radius: 20px;
+  overflow: hidden;
+}
+#HomeView .carousel .item .block .top,
+#HomeView .carousel .item .block .bottom {
+  padding: 15px;
+}
+#HomeView .carousel .item .block .top.top,
+#HomeView .carousel .item .block .bottom.top {
+  background-color: white;
+}
+#HomeView .carousel .item .block .top.bottom,
+#HomeView .carousel .item .block .bottom.bottom {
+  background-color: #eeecdc;
+}
+#HomeView .carousel .item .block .top .dates,
+#HomeView .carousel .item .block .bottom .dates {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+#HomeView .carousel .item .block .top .dates span,
+#HomeView .carousel .item .block .bottom .dates span {
+  font-size: 14px;
+  color: #616161;
+}
+#HomeView .carousel .item .block .top .list,
+#HomeView .carousel .item .block .bottom .list {
+  border-radius: 20px;
+  border: 1px solid #f0f0f0;
+  background-color: #f9faf5;
+  list-style: none;
+}
+#HomeView .carousel .item .block .top .list li,
+#HomeView .carousel .item .block .bottom .list li {
+  padding: 10px;
+  color: #383838;
+  border-bottom: 1px solid #f0f0f0;
+}
+#HomeView .carousel .item .block .top .list li:last-child,
+#HomeView .carousel .item .block .bottom .list li:last-child {
+  border: none;
+}
+
+#layout {
+  display: flex;
+}
